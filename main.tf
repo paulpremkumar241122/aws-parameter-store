@@ -7,10 +7,31 @@ resource "aws_ssm_parameter" "params" {
 
 variable "params" {
   default = [
-    { name = "roboshop.dev.frontend.catalogue_url", value = "http://catalogue-dev.vagdevi.store", type = "String" },
-    { name = "roboshop.dev.frontend.user_url", value = "http://user-dev.vagdevi.store", type = "String" },
-    { name = "roboshop.dev.frontend.cart_url", value = "http://cart-dev.vagdevi.store", type = "String" },
-    { name = "roboshop.dev.frontend.shipping_url", value = "http://shipping-dev.vagdevi.store", type = "String" },
-    { name = "roboshop.dev.frontend.payment_url", value = "http://payment-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.frontend.catalogue_url", value = "http://catalogue-dev.vagdevi.store:8080/", type = "String" },
+    { name = "roboshop.dev.frontend.user_url", value = "http://user-dev.vagdevi.store:8080/", type = "String" },
+    { name = "roboshop.dev.frontend.cart_url", value = "http://cart-dev.vagdevi.store:8080/", type = "String" },
+    { name = "roboshop.dev.frontend.shipping_url", value = "http://shipping-dev.vagdevi.store:8080/", type = "String" },
+    { name = "roboshop.dev.frontend.payment_url", value = "http://payment-dev.vagdevi.store:8080/", type = "String" },
+    { name = "roboshop.dev.cart.redis_host", value = "redis-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.cart.catalogue_host", value = "catalogue-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.cart.catalogue_port", value = "8080", type = "String" },
+    { name = "roboshop.dev.catalogue.mongo", value = "true", type = "String" },
+    { name = "roboshop.dev.catalogue.mongo_url", value = "mongodb://mongodb-dev.vagdevi.store:27017/catalogue", type = "String" },
+    { name = "roboshop.dev.payment.cart_host", value = "cart-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.payment.cart_port", value = "8080", type = "String" },
+    { name = "roboshop.dev.payment.user_host", value = "user-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.payment.user_port", value = "8080", type = "String" },
+    { name = "roboshop.dev.payment.amqp_host", value = "rabbitmq-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.payment.amqp_user", value = "roboshop", type = "String" },
+    { name = "roboshop.dev.shipping.cart_endpoint", value = "cart-dev.vagdevi.store:8080", type = "String" },
+    { name = "roboshop.dev.shipping.db_host", value = "mysql-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.user.mongo", value = "true", type = "String" },
+    { name = "roboshop.dev.user.redis_host", value = "redis-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.user.mongo_url", value = "mongodb://mongodb-dev.vagdevi.store:27017/users", type = "String" },
+
+
+
+    #### Passwords will not be stored in git repos, In the companies it will be created manually . who have access will store this secret in parameter store....
+    { name = "roboshop.dev.payment.amqp_pass", value = "roboshop123", type = "SecureString" },
   ]
 }
