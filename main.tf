@@ -3,6 +3,10 @@ resource "aws_ssm_parameter" "params" {
   name  = var.params[count.index].name
   type  = var.params[count.index].type
   value = var.params[count.index].value
+
+  overwrite = true
+
+  key_id = "5ccefc9a-0cc1-49a5-a6b0-4ed8e995551c"
 }
 
 variable "params" {
@@ -29,11 +33,15 @@ variable "params" {
     { name = "roboshop.dev.user.redis_host", value = "redis-dev.vagdevi.store", type = "String" },
     { name = "roboshop.dev.user.mongo_url", value = "mongodb://mongodb-dev.vagdevi.store:27017/users", type = "String" },
     { name = "roboshop.dev.rabbitmq.amqp_user", value = "roboshop", type = "String" },
+    { name = "roboshop.dev.mysql.username", value = "roboshop", type = "String" },
+
 
 
     #### Passwords will not be stored in git repos, In the companies it will be created manually . who have access will store this secret in parameter store....
     { name = "roboshop.dev.payment.amqp_password", value = "roboshop123", type = "SecureString" },
     { name = "roboshop.dev.rabbitmq.amqp_pass", value = "roboshop123", type = "SecureString" },
+    { name = "roboshop.dev.mysql.password", value = "roboshop123", type = "SecureString" },
+
 
 
   ]
