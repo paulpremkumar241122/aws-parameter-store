@@ -34,15 +34,13 @@ variable "params" {
     { name = "roboshop.dev.user.mongo_url", value = "mongodb://mongodb-dev.vagdevi.store:27017/users", type = "String" },
     { name = "roboshop.dev.rabbitmq.amqp_user", value = "roboshop", type = "String" },
     { name = "roboshop.dev.mysql.username", value = "roboshop", type = "String" },
-
-
+    { name = "roboshop.dev.docdb.username", value = "roboshop", type = "String" },
 
     #### Passwords will not be stored in git repos, In the companies it will be created manually . who have access will store this secret in parameter store....
     { name = "roboshop.dev.payment.amqp_password", value = "roboshop123", type = "SecureString" },
     { name = "roboshop.dev.rabbitmq.amqp_pass", value = "roboshop123", type = "SecureString" },
     { name = "roboshop.dev.mysql.password", value = "roboshop123", type = "SecureString" },
-
-
+    { name = "roboshop.dev.docdb.password", value = "roboshop123", type = "SecureString" },
 
   ]
 }
