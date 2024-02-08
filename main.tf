@@ -17,6 +17,7 @@ variable "params" {
     { name = "roboshop.dev.frontend.shipping_url", value = "https://shipping-dev.vagdevi.store/", type = "String" },
     { name = "roboshop.dev.frontend.payment_url", value = "https://payment-dev.vagdevi.store/", type = "String" },
 
+
     { name = "roboshop.dev.cart.redis_host", value = "redis-dev.vagdevi.store", type = "String" },
     { name = "roboshop.dev.cart.catalogue_host", value = "catalogue-dev.vagdevi.store", type = "String" },
     { name = "roboshop.dev.cart.catalogue_port", value = "8080", type = "String" },
