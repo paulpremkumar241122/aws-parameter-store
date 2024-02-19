@@ -18,9 +18,9 @@ variable "params" {
     { name = "roboshop.dev.frontend.payment_url", value = "https://payment-dev.vagdevi.store/", type = "String" },
 
 
-    { name = "roboshop.dev.cart.redis_host", value = "redis-dev.vagdevi.store", type = "String" },
+    { name = "roboshop.dev.cart.redis_host", value = "elasticache-dev.paw5sy.clustercfg.use1.cache.amazonaws.com", type = "String" },
     { name = "roboshop.dev.cart.catalogue_host", value = "catalogue-dev.vagdevi.store", type = "String" },
-    { name = "roboshop.dev.cart.catalogue_port", value = "8080", type = "String" },
+    { name = "roboshop.dev.cart.catalogue_port", value = "80", type = "String" },
 
 
     { name = "roboshop.dev.catalogue.mongo", value = "true", type = "String" },
@@ -32,14 +32,19 @@ variable "params" {
     { name = "roboshop.dev.payment.user_port", value = "8080", type = "String" },
     { name = "roboshop.dev.payment.amqp_host", value = "rabbitmq-dev.vagdevi.store", type = "String" },
     { name = "roboshop.dev.payment.amqp_user", value = "roboshop", type = "String" },
+
     { name = "roboshop.dev.shipping.cart_endpoint", value = "cart-dev.vagdevi.store:8080", type = "String" },
     { name = "roboshop.dev.shipping.db_host", value = "mysql-dev.vagdevi.store", type = "String" },
+
     { name = "roboshop.dev.user.mongo", value = "true", type = "String" },
-    { name = "roboshop.dev.user.redis_host", value = "redis-dev.vagdevi.store", type = "String" },
+
+    { name = "roboshop.dev.user.redis_host", value = "elasticache-dev.paw5sy.clustercfg.use1.cache.amazonaws.com", type = "String" },
     { name = "roboshop.dev.user.mongo_url", value = "mongodb://mongodb-dev.vagdevi.store:27017/users", type = "String" },
+
     { name = "roboshop.dev.rabbitmq.amqp_user", value = "roboshop", type = "String" },
     { name = "roboshop.dev.mysql.username", value = "roboshop", type = "String" },
     { name = "roboshop.dev.docdb.username", value = "roboshop", type = "String" },
+    { name = "roboshop.dev.mysql.endpoint", value = "rds-dev.cluster-cvku0oeskh9l.us-east-1.rds.amazonaws.com", type = "String" },
 
     #### Passwords will not be stored in git repos, In the companies it will be created manually . who have access will store this secret in parameter store....
     { name = "roboshop.dev.payment.amqp_password", value = "roboshop123", type = "SecureString" },
