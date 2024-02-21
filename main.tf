@@ -48,7 +48,7 @@ variable "params" {
 
     #### Passwords will not be stored in git repos, In the companies it will be created manually . who have access will store this secret in parameter store....
     { name = "roboshop.dev.payment.amqp_pass", value = "roboshop123", type = "SecureString" },
-    { name = "roboshop.dev.rabbitmq.amqp_pass", value = "roboshop123", type = "SecureString" },
+    { name = "roboshop.dev.rabbitmq.ampq_pass", value = "roboshop123", type = "SecureString" },
     { name = "roboshop.dev.mysql.password", value = "roboshop123", type = "SecureString" },
     { name = "roboshop.dev.docdb.password", value = "roboshop123", type = "SecureString" },
 
