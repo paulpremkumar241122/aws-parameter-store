@@ -39,7 +39,7 @@ variable "params" {
     { name = "roboshop.dev.user.mongo", value = "true", type = "String" },
 
     { name = "roboshop.dev.user.redis_host", value = "elasticache-dev.paw5sy.clustercfg.use1.cache.amazonaws.com", type = "String" },
-    { name = "roboshop.dev.user.mongo_url", value = "mongodb://mongodb-dev.vagdevi.store:27017/users", type = "String" },
+    #{ name = "roboshop.dev.user.mongo_url", value = "mongodb://mongodb-dev.vagdevi.store:27017/users", type = "String" },
 
     { name = "roboshop.dev.rabbitmq.ampq_user", value = "roboshop", type = "String" },
     { name = "roboshop.dev.mysql.username", value = "roboshop", type = "String" },
