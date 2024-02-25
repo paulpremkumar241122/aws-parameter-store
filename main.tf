@@ -111,12 +111,12 @@ variable "params" {
 
     #### modified for DB Clusters
 
-    { name = "roboshop.prod.catalogue.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-dev-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
+    { name = "roboshop.prod.catalogue.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-prod-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
 
-    { name = "roboshop.prod.catalogue.docdb_endpoint", value = "docdb-dev-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com", type = "String" },
+    { name = "roboshop.prod.catalogue.docdb_endpoint", value = "docdb-prod-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com", type = "String" },
 
-    { name = "roboshop.prod.user.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-dev-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com:27017/user?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
+    { name = "roboshop.prod.user.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-prod-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com:27017/user?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
 
-    { name = "roboshop.prod.user.docdb_endpoint", value = "docdb-dev-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com", type = "String" },
+    { name = "roboshop.prod.user.docdb_endpoint", value = "docdb-prod-0.cvku0oeskh9l.us-east-1.docdb.amazonaws.com", type = "String" },
   ]
 }
